@@ -28,6 +28,10 @@ body {
     margin: 0;
   }
 
+.formato {
+  -webkit-user-modify: read-write-plaintext-only;
+  line-height: normal;
+}
 .color {
       color: white;
 }

@@ -20,7 +20,9 @@ export class API {
                     if(resultado.lyrics) {
                          console.log('linea 19');
                          const { lyrics } = resultado;
-                         UI.divResultado.textContent = lyrics;
+                         
+                         UI.divResultado.innerHTML = `${lyrics}`;
+                         UI.divResultado.classList.add('formato');
                          UI.headingResultado.textContent = 'Resultado';
                     } else {
                          // La canción no existe
