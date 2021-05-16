@@ -1,0 +1,26 @@
+{
+  "name": "Lyrics Songs Extension",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "Extensión donde podrás visualizar las letras de tus canciones.",
+  "author": "",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
