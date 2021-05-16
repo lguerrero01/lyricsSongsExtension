@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "manifest_version": 2,
   "description": "Extensión donde podrás visualizar las letras de tus canciones.",
-  "author": "",
+  "author": "Luis Guerrero",
+  "permissions" :["storage", "tabs", "<all_urls>", "activeTab", "alarms"],
   "icons": {
     "128": "images/icon.png"
   },
@@ -22,5 +23,5 @@
     "scripts": ["background.js"],
     "persistent": true
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js; object-src 'self'"
 }
